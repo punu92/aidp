@@ -1,0 +1,3078 @@
+321	481
+Enter alpha: Enter beta:  poly:: ver: row=127 col=284
+entering check_R1
+poly:: ver: row=127 col=285
+entering check_R1
+
+poly:: ver: row=127 col=286
+entering check_R1
+
+poly:: ver: row=127 col=287
+entering check_R1
+
+.
+poly:: ver: row=128 col=288
+entering check_R1
+
+.
+firstrun is 1 and prev is 3
+poly:: ver: row=128 col=289
+entering check_R1
+
+.
+firstrun is 2 and prev is 3
+poly:: ver: row=128 col=290
+entering check_R1
+
+.
+firstrun is 3 and prev is 3
+poly:: ver: row=128 col=291
+entering check_R1
+
+.
+firstrun is 4 and prev is 3
+poly:: ver: row=128 col=292
+entering check_R1
+
+.
+firstrun is 5 and prev is 3
+poly:: ver: row=128 col=293
+entering check_R1
+
+.
+firstrun is 6 and prev is 3
+poly:: ver: row=128 col=294
+entering check_R1
+
+.
+firstrun is 7 and prev is 3
+poly:: ver: row=128 col=295
+entering check_R1
+
+.
+firstrun is 8 and prev is 3
+poly:: ver: row=128 col=296
+entering check_R1
+
+.
+firstrun is 9 and prev is 3
+poly:: ver: row=128 col=297
+entering check_R1
+
+.
+firstrun is 10 and prev is 3
+poly:: ver: row=128 col=298
+entering check_R1
+
+.
+firstrun is 11 and prev is 3
+poly:: ver: row=128 col=299
+entering check_R1
+
+.
+firstrun is 12 and prev is 3
+poly:: ver: row=128 col=300
+entering check_R1
+
+.
+firstrun is 13 and prev is 3
+poly:: ver: row=128 col=301
+entering check_R1
+
+.
+firstrun is 14 and prev is 3
+poly:: ver: row=128 col=302
+entering check_R1
+
+.
+firstrun is 15 and prev is 3
+poly:: ver: row=128 col=303
+entering check_R1
+
+.
+firstrun is 16 and prev is 3
+poly:: ver: row=128 col=304
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=128 col=305
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=129 col=306
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=129 col=307
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=129 col=308
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=129 col=309
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=129 col=310
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=129 col=311
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=129 col=312
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=130 col=313
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=130 col=314
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=130 col=315
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=130 col=316
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=130 col=317
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=130 col=318
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=130 col=319
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=131 col=320
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=131 col=321
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=131 col=322
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=131 col=323
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=131 col=324
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=131 col=325
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=131 col=326
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=132 col=327
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=132 col=328
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=132 col=329
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=132 col=330
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=132 col=331
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=132 col=332
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=132 col=333
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=133 col=334
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=133 col=335
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=133 col=336
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=133 col=337
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=133 col=338
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=133 col=339
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=133 col=340
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=134 col=341
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=134 col=342
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=134 col=343
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=134 col=344
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=134 col=345
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=134 col=346
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=134 col=347
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=135 col=348
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=135 col=349
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=135 col=350
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=135 col=351
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=135 col=352
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=135 col=353
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=135 col=354
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=136 col=355
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=136 col=356
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=136 col=357
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=136 col=358
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=136 col=359
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=137 col=360
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=137 col=361
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=137 col=362
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=137 col=363
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=137 col=364
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=137 col=365
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=138 col=366
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=138 col=367
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=138 col=368
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=138 col=369
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=138 col=370
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=138 col=371
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=139 col=372
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=139 col=373
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=139 col=374
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=139 col=375
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=139 col=376
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=139 col=377
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=140 col=378
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=140 col=379
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=140 col=380
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=140 col=381
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=140 col=382
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=140 col=383
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=140 col=384
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=141 col=385
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=141 col=386
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=141 col=387
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=141 col=388
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=141 col=389
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=141 col=390
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=141 col=391
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=142 col=392
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=142 col=393
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=142 col=394
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=142 col=395
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=142 col=396
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=142 col=397
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=142 col=398
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=142 col=399
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=143 col=400
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=143 col=401
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=143 col=402
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=143 col=403
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=143 col=404
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=143 col=405
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=143 col=406
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=144 col=407
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=144 col=408
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=144 col=409
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=144 col=410
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=144 col=411
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=144 col=412
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=144 col=413
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=144 col=414
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=145 col=415
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=145 col=416
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=145 col=417
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=145 col=418
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=146 col=419
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=146 col=420
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=146 col=421
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=147 col=422
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=147 col=423
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=147 col=424
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=148 col=425
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=148 col=426
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=148 col=427
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=149 col=428
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=149 col=429
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=149 col=430
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=150 col=431
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=150 col=432
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=150 col=433
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=151 col=434
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=151 col=435
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=151 col=436
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=152 col=437
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=152 col=438
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=152 col=439
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=153 col=440
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=153 col=441
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=154 col=442
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=155 col=443
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=155 col=444
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=156 col=445
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=156 col=446
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=157 col=447
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=158 col=448
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=158 col=449
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=159 col=450
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=159 col=451
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=160 col=452
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=160 col=453
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=161 col=454
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=162 col=455
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=162 col=456
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=163 col=457
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=163 col=458
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=164 col=459
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=165 col=460
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=165 col=461
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=166 col=462
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=167 col=463
+entering check_R1
+
+.
+firstrun is 17 and prev is 3
+poly:: ver: row=168 col=464
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=169 col=464
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=170 col=465
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=171 col=466
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=172 col=467
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=173 col=467
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=174 col=468
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=175 col=469
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=176 col=469
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=177 col=469
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=178 col=469
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=179 col=469
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=180 col=469
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=181 col=469
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=182 col=470
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=183 col=470
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=184 col=470
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=185 col=470
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=186 col=470
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=187 col=470
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=188 col=470
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=189 col=470
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=190 col=470
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=191 col=470
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=192 col=470
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=193 col=470
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=194 col=470
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=195 col=470
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=196 col=469
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=197 col=469
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=198 col=469
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=199 col=468
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=200 col=468
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=201 col=468
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=202 col=467
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=467
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=467
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=205 col=466
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=206 col=466
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=207 col=466
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=208 col=466
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=209 col=466
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=210 col=466
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=211 col=465
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=212 col=465
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=213 col=465
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=214 col=465
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=215 col=465
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=216 col=465
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=217 col=466
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=218 col=466
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=219 col=467
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=220 col=467
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=221 col=468
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=222 col=469
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=223 col=469
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=224 col=470
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=225 col=470
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=226 col=471
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=227 col=471
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=228 col=472
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=229 col=472
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=230 col=472
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=231 col=473
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=232 col=473
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=233 col=474
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=234 col=474
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=235 col=474
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=236 col=474
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=237 col=474
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=238 col=474
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=239 col=474
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=240 col=473
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=241 col=472
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=241 col=471
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=241 col=470
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=241 col=469
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=241 col=468
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=241 col=467
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=240 col=466
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=240 col=465
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=239 col=464
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=238 col=463
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=238 col=462
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=237 col=461
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=237 col=460
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=236 col=459
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=235 col=458
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=235 col=457
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=234 col=456
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=233 col=455
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=233 col=454
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=232 col=453
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=232 col=452
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=231 col=451
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=230 col=450
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=229 col=449
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=228 col=448
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=227 col=448
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=226 col=448
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=225 col=447
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=224 col=447
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=223 col=446
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=222 col=446
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=221 col=446
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=220 col=445
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=219 col=445
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=218 col=445
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=217 col=444
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=216 col=444
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=215 col=443
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=214 col=443
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=213 col=444
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=212 col=444
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=211 col=444
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=210 col=444
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=209 col=444
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=208 col=444
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=207 col=444
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=206 col=444
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=205 col=444
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=445
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=445
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=202 col=445
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=201 col=445
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=200 col=446
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=199 col=446
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=198 col=447
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=197 col=447
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=196 col=448
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=195 col=448
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=194 col=449
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=193 col=449
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=192 col=449
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=191 col=448
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=190 col=447
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=190 col=446
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=189 col=445
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=188 col=444
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=188 col=443
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=187 col=442
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=186 col=441
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=186 col=440
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=185 col=439
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=185 col=438
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=184 col=437
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=183 col=436
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=183 col=435
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=182 col=434
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=182 col=433
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=182 col=432
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=182 col=431
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=182 col=430
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=181 col=429
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=181 col=428
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=181 col=427
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=181 col=426
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=181 col=425
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=181 col=424
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=181 col=423
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=181 col=422
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=181 col=421
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=181 col=420
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=181 col=419
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=180 col=418
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=180 col=417
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=180 col=416
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=180 col=415
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=180 col=414
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=180 col=413
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=180 col=412
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=180 col=411
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=180 col=410
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=180 col=409
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=180 col=408
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=180 col=407
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=179 col=406
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=179 col=405
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=179 col=404
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=179 col=403
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=179 col=402
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=179 col=401
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=178 col=400
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=178 col=399
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=178 col=398
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=178 col=397
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=177 col=396
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=177 col=395
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=177 col=394
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=177 col=393
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=176 col=392
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=176 col=391
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=176 col=390
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=176 col=389
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=175 col=388
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=175 col=387
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=175 col=386
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=175 col=385
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=175 col=384
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=175 col=383
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=175 col=382
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=175 col=381
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=175 col=380
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=175 col=379
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=174 col=378
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=174 col=377
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=174 col=376
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=174 col=375
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=174 col=374
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=174 col=373
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=174 col=372
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=174 col=371
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=173 col=370
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=173 col=369
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=173 col=368
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=173 col=367
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=173 col=366
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=173 col=365
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=172 col=364
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=172 col=363
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=172 col=362
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=172 col=361
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=172 col=360
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=172 col=359
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=172 col=358
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=172 col=357
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=172 col=356
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=172 col=355
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=172 col=354
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=172 col=353
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=172 col=352
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=172 col=351
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=171 col=350
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=171 col=349
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=171 col=348
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=171 col=347
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=171 col=346
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=171 col=345
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=170 col=344
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=170 col=343
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=170 col=342
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=170 col=341
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=170 col=340
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=170 col=339
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=171 col=338
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=171 col=337
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=172 col=336
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=172 col=335
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=173 col=334
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=174 col=333
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=175 col=332
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=176 col=331
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=177 col=330
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=178 col=329
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=179 col=328
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=180 col=328
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=181 col=329
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=182 col=329
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=183 col=330
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=184 col=331
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=185 col=331
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=186 col=331
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=187 col=332
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=188 col=332
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=189 col=332
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=190 col=332
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=191 col=331
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=192 col=330
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=193 col=329
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=193 col=328
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=194 col=327
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=194 col=326
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=194 col=325
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=194 col=324
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=195 col=323
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=195 col=322
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=195 col=321
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=196 col=320
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=197 col=320
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=198 col=320
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=199 col=319
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=200 col=319
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=201 col=319
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=202 col=318
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=318
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=317
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=205 col=316
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=206 col=316
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=207 col=316
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=208 col=315
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=209 col=315
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=210 col=314
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=211 col=313
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=211 col=312
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=212 col=311
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=213 col=310
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=213 col=309
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=213 col=308
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=213 col=307
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=213 col=306
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=213 col=305
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=213 col=304
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=213 col=303
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=213 col=302
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=213 col=301
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=212 col=300
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=212 col=299
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=212 col=298
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=212 col=297
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=212 col=296
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=211 col=295
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=211 col=294
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=210 col=293
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=210 col=292
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=210 col=291
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=210 col=290
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=211 col=289
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=211 col=288
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=212 col=287
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=212 col=286
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=212 col=285
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=211 col=284
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=210 col=284
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=209 col=284
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=208 col=285
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=207 col=286
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=206 col=287
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=205 col=288
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=205 col=289
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=290
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=291
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=202 col=291
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=201 col=290
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=201 col=289
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=201 col=288
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=201 col=287
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=201 col=286
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=201 col=285
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=202 col=284
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=202 col=283
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=202 col=282
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=202 col=281
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=280
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=279
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=278
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=277
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=276
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=275
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=274
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=205 col=273
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=205 col=272
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=205 col=271
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=205 col=270
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=205 col=269
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=205 col=268
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=205 col=267
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=266
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=265
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=264
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=263
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=262
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=261
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=260
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=259
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=258
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=257
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=256
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=255
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=254
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=253
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=252
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=251
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=202 col=250
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=202 col=249
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=202 col=248
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=202 col=247
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=202 col=246
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=202 col=245
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=202 col=244
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=202 col=243
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=202 col=242
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=241
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=240
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=239
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=238
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=237
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=236
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=235
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=234
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=233
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=232
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=231
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=230
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=229
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=228
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=227
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=226
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=205 col=225
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=205 col=224
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=205 col=223
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=205 col=222
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=205 col=221
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=205 col=220
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=205 col=219
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=205 col=218
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=205 col=217
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=206 col=216
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=206 col=215
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=206 col=214
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=206 col=213
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=206 col=212
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=206 col=211
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=206 col=210
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=206 col=209
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=206 col=208
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=206 col=207
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=206 col=206
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=206 col=205
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=207 col=204
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=208 col=203
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=209 col=202
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=210 col=202
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=211 col=201
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=212 col=201
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=213 col=200
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=213 col=199
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=214 col=198
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=214 col=197
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=214 col=196
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=215 col=195
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=215 col=194
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=215 col=193
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=216 col=192
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=216 col=191
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=216 col=190
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=216 col=189
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=216 col=188
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=216 col=187
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=216 col=186
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=215 col=185
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=215 col=184
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=215 col=183
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=215 col=182
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=214 col=181
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=214 col=180
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=213 col=179
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=213 col=178
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=212 col=177
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=212 col=176
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=211 col=175
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=211 col=174
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=210 col=173
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=210 col=172
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=209 col=171
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=209 col=170
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=208 col=169
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=208 col=168
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=207 col=167
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=207 col=166
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=206 col=165
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=205 col=164
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=205 col=163
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=206 col=162
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=206 col=161
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=206 col=160
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=207 col=159
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=207 col=158
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=207 col=157
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=207 col=156
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=208 col=155
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=208 col=154
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=208 col=153
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=209 col=152
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=209 col=151
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=209 col=150
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=210 col=149
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=210 col=148
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=210 col=147
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=210 col=146
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=210 col=145
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=210 col=144
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=210 col=143
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=209 col=142
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=209 col=141
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=209 col=140
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=209 col=139
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=209 col=138
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=209 col=137
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=209 col=136
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=209 col=135
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=209 col=134
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=209 col=133
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=209 col=132
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=209 col=131
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=209 col=130
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=209 col=129
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=209 col=128
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=209 col=127
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=208 col=126
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=208 col=125
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=208 col=124
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=208 col=123
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=208 col=122
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=207 col=121
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=207 col=120
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=207 col=119
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=207 col=118
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=207 col=117
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=207 col=116
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=206 col=115
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=206 col=114
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=206 col=113
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=205 col=112
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=205 col=111
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=205 col=110
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=109
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=108
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=204 col=107
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=106
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=105
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=104
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=103
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=102
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=101
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=100
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=99
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=98
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=97
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=96
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=95
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=94
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=93
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=92
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=91
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=90
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=89
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=88
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=87
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=86
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=85
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=84
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=83
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=82
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=81
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=80
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row=203 col=79
+entering check_R1
+
+more than 3.returning *1
+poly:: ver: row
