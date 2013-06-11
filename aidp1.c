@@ -652,8 +652,10 @@ sprintf(mystring,"-op--%.1f-%.2f.ppm",alpha,beta);
                           for(j=0;j<c;j++)
                            {
                             ch=*(cdata+i*c+j);
-mydata=*(cdata+i*c+j);
-if(mydata==0 || mydata==255){//if(mydata==0) printf("zero ");
+mydata=*(cdata+i*c+j);printf("%d\n",mydata);
+if(mydata==0 || mydata==255){//if(mydata==0) printf("zero \n");
+//if(mydata==255) printf("black\n");
+
 fwrite(&ch,sizeof(ch),1,fp1);
 fwrite(&ch,sizeof(ch),1,fp1);
 fwrite(&ch,sizeof(ch),1,fp1);}

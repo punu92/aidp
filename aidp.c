@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "myfunction_pgm.c"
+#include "myfunction_ppm.c"
 #include "rccount.c"
 #include <string.h>
 #include <math.h>
@@ -43,7 +43,7 @@ main(int argc,char* argv[])
                         {
                         int *x,flag=0;
                         int i,j,vc=0;
-			//FILE *fm=fopen("mat.dat","w");
+			FILE *fm=fopen("mat.dat","w");
 
 			FILE *fv=fopen("ver.dat","w");
 
@@ -72,15 +72,15 @@ main(int argc,char* argv[])
 						fprintf(fv,"%d\t%d\n",i,j);
 						count0++;
 						}
-					//fprintf(fm,"%d\t",*(mat+i*col+j));
+					fprintf(fm,"%d\t",*(mat+i*col+j));
 					*(cdata+i*col+j)=255;
 					*(visited+i*col+j)=0; 
 					*(taken+i*col+j)=0;
 				}
-				//fprintf(fm,"\n");
+				fprintf(fm,"\n");
 			}
-			//fprintf(fm,"\n");
-			//fclose(fm);
+			fprintf(fm,"\n");
+			fclose(fm);
 			fclose(fv);			
 
 			v=(vertx *)malloc(count0*sizeof(int));
@@ -694,10 +694,10 @@ void build_image (int r,int c, char* s) /*construct the image to show curvature*
                           FILE *fp1,*fp2;
                           int red,green,blue;
                           int i,j,mydata;
-                          unsigned char ch;
+                          unsigned char ch,color[3];
                           char t[200];
                           int d,m;
-                          char *mystring="-output.pgm"; /* output image name*/
+                          char mystring[30]; /* output image name*/
                           build_my_file(r,c);/*to make myfile.dat */
                           /*--------------------------------*/
                  for(i=strlen(s)-1;i>=0;i--)
@@ -708,7 +708,9 @@ void build_image (int r,int c, char* s) /*construct the image to show curvature*
                        t[j]=s[j];
                     t[j]='\0';
                /*-------------------------------*/
+			  sprintf(mystring,"-%.1f-%.2f.ppm",alpha,beta);
                           strcat(t,mystring);
+
                           fp2=fopen("myfile.dat","rb"); /* contains the header lines of the image*/
                           fp1=fopen(t,"wb+"); /*update t if needed- to change name*/
                           while(fread(&ch,sizeof(ch),1,fp2)==1)
@@ -716,8 +718,13 @@ void build_image (int r,int c, char* s) /*construct the image to show curvature*
                           for(i=0;i<r;i++)
                           for(j=0;j<c;j++)
                            {
-                            ch=*(cdata+i*c+j);
-                            fwrite(&ch,sizeof(ch),1,fp1);
+                            //ch=*(cdata+i*c+j);
+				mydata=*(cdata+i*c+j);//printf("%d\n",mydata);
+				if(mydata==0 ){color[0]=255;color[1]=0;color[2]=0;printf("0\n");fwrite(color,1,3,fp1);}
+				else if(mydata==255 ){color[0]=127;color[1]=127;color[2]=127;printf("255\n");fwrite(color,1,3,fp1);}
+				else if(mydata==9){color[0]=255;color[1]=255;color[2]=0;printf("9\n");fwrite(color,1,3,fp1);}
+				
+                            //fwrite(&ch,sizeof(ch),1,fp1);
                            }
                           
 
