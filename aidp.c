@@ -27,7 +27,7 @@ float beta,alpha,totvd=0.0,totrd=0.0;
 void get_the_mat(char * ,int ,int );    /* to read the input image and fill the 'mat' matrix*/
 void build_image(int,int,char*);              /*construct the image to show curvature*/
 
-void start(vertx *,int,int);
+void start(int,int);
 void getDist(vertx,vertx);
 void aidp(vertx *,int,int);
 void calcDist();
@@ -36,7 +36,7 @@ float findPath(vertx *,vertx *,int *,int *,int, int, vertx);
 void findNextPt(int,int,int *,int *, int);
 void findn(vertx *,int *,int,int,int,vertx);
 void poly(int i,int j);
-int checkR1R2(int);
+int checkR1R2(int,int);
 
 /*---------------------------------------*/
 main(int argc,char* argv[])
@@ -111,13 +111,13 @@ main(int argc,char* argv[])
 					fprintf(fv,"%d\t%d\n",i,j);
 			fclose(fv);*/
 
-                        //build_image(row,col, argv[1]);/*build image -- uses cdata*/   
+                        build_image(row,col, argv[1]);/*build image -- uses cdata*/   
                         }
 
 void poly(int r,int c)
 {
 int i=r,j=c,k,chng,vc;
-int dir;
+int start1=0,dir;
 mark=0;
 FILE *ft=fopen("taken.dat","w");
 //cv=(vertx *)malloc(row*col*sizeof(vertx));
@@ -136,7 +136,7 @@ do
 
 	chng=0;
 	*(taken+i*col+j)=1;  //fprintf(ft,"%d\t%d\n",i,j);
-	printf("poly:: ver: row=%d col=%d\n",i,j);
+//	printf("poly:: ver: row=%d col=%d\n",i,j);
 	
 	if(j>0 && *(mat+i*col+j-1)==0 && *(taken+i*col+j-1)==0 && chng==0){j=j-1; chng=1; dir=4;}
    
@@ -157,8 +157,11 @@ do
 	*(direc+vcount)=dir;
 	vcount++;
 	
-	k=checkR1R2(vcount);
-	if(k){v[mark].i=i; v[mark].j=j; v[mark].yes=0; mark++;fprintf(ft,"%d\t%d\n",i,j);}
+	k=checkR1R2(start1,vcount);
+	if(k)
+		{start1=vcount;
+		v[mark].i=i; v[mark].j=j; v[mark].yes=0; mark++;
+		fprintf(ft,"%d\t%d\n",i,j);}
 
 	if(!chng) {printf("Breaking..\n");break;}
 
@@ -167,13 +170,6 @@ do
 //cnt1++;
 printf("vcount= %d\n",vcount);
 
-//v=(vertx *)malloc(vcount*sizeof(vertx));
-
-//for(i=0;i<=cnt1;i++)
-//	v[i]=cv[i];
-
-//free(cv);
-
 	vc=vcount;
 	vcount>>1;
 
@@ -181,134 +177,170 @@ printf("vcount= %d\n",vcount);
 	rd=(int *)malloc(vcount*(sizeof(int)));
 	vcount=vc;
 
-//        start(v,0,mark); 
+//	printf("------------------------Vertices------\n");
+//	for(vc=0;vc<mark;vc++)
+//		printf("Taken = i: %d  j: %d\n",v[vc].i,v[vc].j);
 
-/*	for(vc=0;vc<mark;vc++)
+        start(0,mark); 
+
+	for(vc=0;vc<mark;vc++)
 	{
 		if(v[vc].yes==1)
 		{//fprintf(ft,"%d\t%d\n",v[vc].i,v[vc].j);
 		*(cdata+(v[vc].i)*col+(v[vc].j))=9;
 		}
 	}  //fclose(ft);
-*/
+
 //	free(v);
 //	free(cv);
-//	free(vd);
-//	free(rd);
+	free(vd);
+	free(rd);
 
 }
 
 //--------------------------------------------DSS Check----------------------------------------------------------------------
 
-int checkR1R2(int ct)
+int checkR1R2(int start,int ct)
 {
-printf("entering check_R1\n");
-if(ct==0 || ct==1)return 0;
+//printf("entering check_R1\n");
+
+if((ct-start)<2)	return 0;
+
 int second,edge_break,first_run,prev,second_run,nonsing_run,prev_sec,first,third;
 
              second=300;edge_break=0;
              first_run=prev=0;second_run=0;nonsing_run=0;
 
 //------Checking R1-- Directions of runs can have 2 values, differing by 1 modulus 8
-             for(x=0;x<ct;x++)
-             {
- //				printf("%d ",*(direc+x));
-                              if(x==0)first=*(direc+x);
-                              if(*(direc+x)!=first && second==300){second=*(direc+x);}
-                              else if(*(direc+x)!=first && *(direc+x)!=second){edge_break=1;/*count=x;*/break;}
-		
-             }
-printf("\n");
-if(second==300)return 0;
-             if(edge_break==1)
-             {
 
-			printf("more than 3.returning *%d\n",edge_break);                             
-			 return edge_break;
-             }
- printf(".\n");//return 0;
-             prev_sec=-1;prev=0;nonsing_run=0;x=0;first_run=0;
-		while(*(direc+x)==first && x<ct){first_run++;x++;}//1
-		while(*(direc+x)==second && x<ct){nonsing_run++;x++;}//2
-		//if(first_run==1 || nonsing_run==1){;}
-		//else return 1;
-		if(first_run<nonsing_run)
+	for(x=start;x<ct;x++)
+		{
+		//printf("%d ",*(direc+x));
+		if(x==0)first=*(direc+x);
+
+		if(*(direc+x)!=first && second==300){second=*(direc+x);}
+		else if(*(direc+x)!=first && *(direc+x)!=second){edge_break=1;/*count=x;*/break;}
+	
+		}//printf("\n");
+
+	if(second==300)return 0;
+
+	if(edge_break==1)
+		{
+		//printf("more than 3.returning-- %d\n",edge_break);                             
+		return edge_break;
+                }
+
+	//printf(".\n");//return 0;
+
+	prev_sec=-1;prev=0;nonsing_run=0;x=start;first_run=0;
+
+	while(*(direc+x)==first && x<ct){first_run++;x++;}//1
+	while(*(direc+x)==second && x<ct){nonsing_run++;x++;}//2
+
+	if(first_run!=1 && nonsing_run!=1)	return 1;
+		
+	if(first_run<nonsing_run)
 		{
 		prev=nonsing_run;//3
 		nonsing_run=0;
-		while(*(direc+x)==first && x<ct){//if(*(direc+x+1)==first)return 1;
+		while(*(direc+x)==first && x<ct)
+		{/*//*/if(*(direc+x+1)==first)return 1;
 		x++;}
-		if(x==ct)return 0;
+
+		if(x==ct)	return 0;
+
 		while(*(direc+x)==second && x<ct){nonsing_run++;x++;}//3
+	
 		if(nonsing_run!=0)
-		{
-		if(x==ct)return 0;
-		if(nonsing_run>=(prev-relax) && nonsing_run<=(prev+relax))prev_sec=nonsing_run;
-		else return 1;
-		}
+			{
+			if(x==ct)	return 0;
+	if(nonsing_run>=(prev-relax) && nonsing_run<=(prev+relax))prev_sec=nonsing_run;
+	//		if(nonsing_run==(prev-1) || nonsing_run==(prev+1))	prev_sec=nonsing_run;
+			else return 1;
+			}
 		else
-		{return 0;}
+			{return 0;}
 //printf("___");
 		nonsing_run=0;
 		while(x<ct)
 		{
-		nonsing_run=0;
-			if(*(direc+x+1)==first && x!=ct-1){//printf("next is same\n");
-				return 1;} else x++;
-			//while(*(direc+x)==first && x<ct)x++;			
-			if(x==ct)return 0;
-			while(x<ct && *(direc+x)==second){nonsing_run++;x++;}
-if(!(nonsing_run>=(prev-relax) && nonsing_run<=(prev+relax)))
-{printf("nonsing is %d. prev is %d.beyond bounds.1 \n",nonsing_run,prev);
-return 1;}
 			nonsing_run=0;
-		}return 0;
+			if(*(direc+x+1)==first && x!=ct-1){//printf("next is same\n");
+			return 1;} else x++;
+		//while(*(direc+x)==first && x<ct)x++;			
+				if(x==ct)return 0;
+				while(x<ct && *(direc+x)==second){nonsing_run++;x++;}
+			
+			if(!(nonsing_run>=(prev-relax) && nonsing_run<=(prev+relax)))
+		//	if(nonsing_run!=prev && nonsing_run!=prev_sec)
+				{//printf("nonsing is %d. prev is %d.beyond bounds.1 \n",nonsing_run,prev);
+				return 1;}
+			nonsing_run=0;
+			}return 0;
 		}
-		else if(nonsing_run==1)
+	
+	else //if(nonsing_run==1)
 		{
 		prev=first_run;//2
 		first_run=0;
-		while(*(direc+x)==second && x<ct){//if(*(direc+x+1)==second && x!=ct-1)return 1;
-		x++;}
-		if(x==ct)return 0;
+
+		//while(*(direc+x)==second && x<ct)
+		//	{//if(*(direc+x+1)==second && x!=ct-1)return 1;
+		//	x++;}
+
+		//if(x==ct)return 0;
+
 		while(*(direc+x)==first && x<ct){first_run++;x++;}//3
-		printf("firstrun is %d and prev is %d\n",first_run,prev);
-		/*if(first_run!=0)
-		{
-		if(x==ct || x==ct-1)return 0;
-		if(first_run>=(prev-relax) && first_run<=(prev+relax))prev_sec=first_run;
-		else return 1;
-                }
+		
+//		printf("firstrun is %d and prev is %d\n",first_run,prev);
+
+		if(first_run!=0)
+			{
+			//if(x==ct || x==ct-1)return 0;
+			if((first_run>=(prev-1) && first_run<=(prev+1)) /*&& *(direc+x)==second*/)
+				prev_sec=first_run;
+			else if(first_run<prev && x>ct-1) {/*printf("first_run<prev %d\n",first_run);*/return 0;}
+			else {/*printf("Break edge\n");*/return 1;}
+	                }
 		else
-		{return 0;}//printf("prev_sec is %d\n",prev_sec);*/
+			return 0;
+		//printf("prev_sec is %d\n",prev_sec);
+		
 		first_run=0;
 		while(x<ct)
-		{
-			if(*(direc+x)==second && *(direc+x+1)==second && x+1<ct)return 1; else x++;
-			while(x<ct && *(direc+x)==first){first_run++;x++;}//printf("firstrun is %d\n",first_run);
-			if(x==ct )return 0;
-			if(!(first_run>=(prev-relax) && first_run<=(prev+relax)))return 1;
+			{
+			if(*(direc+x)==second && *(direc+x+1)==second /*&& x+1<ct*/)
+				return 1; 
+			else x++;
+
+			while(x<ct && *(direc+x)==first){first_run++;x++;}
+
+			//printf("firstrun is %d\n",first_run);
+					
+			if(!(first_run<prev && x>ct-2) && (first_run!=prev || first_run!=prev_sec))	return 1;
+			else if(x==ct )return 0;
 			first_run=0;
-		}
-	return 0;
+			}
+		return 0;
 		}
 		
- 	printf("returning %d\n",edge_break);                             
-             return 1;
+	//printf("returning %d\n",edge_break);                             
+	return 1;
 
 }
 
 //--------------------------------------------Adaptively Improved Douglas Peucker Algorithm-----------------------------------
 
-void start(vertx *points, int start, int end)
+void start(int start, int end)
 {
 vertx center, p1, p2;
 int x=0,y=0,q,l1max=0,l2max=0,l=0;
 
 for(q=start;q<end;q++)
   {
-     x+=points[q].i;
-     y+=points[q].j;
+     x+=v[q].i;
+     y+=v[q].j;//printf("Sum: %d , %d\n",x,y);
   }
 if(end==start) {center.i=x; center.j=y;}
 else{
@@ -316,31 +348,31 @@ x=x/(end-start);
 center.i=x;
 y=y/(end-start);
 center.j=y;}
-/*
+
 for(q=start;q<end;q++)
    {
-      l=sqrt(pow((x-points[q].i),2)+ pow((y-points[q].j),2));
+      l=sqrt(pow((x-v[q].i),2)+ pow((y-v[q].j),2));
       if(l>l1max)
                 {
                 l1max=l;
-                p1=points[q];
+                p1=v[q];
                 }
    }
    
 for(q=start;q<end;q++)
    {
-      l=sqrt(pow((p1.i-points[q].i),2)+ pow((p1.j-points[q].j),2));
+      l=sqrt(pow((p1.i-v[q].i),2)+ pow((p1.j-v[q].j),2));
       if(l>l1max)
                 {
                 l1max=l;
-                p2=points[q];
+                p2=v[q];
                 }
    }
-*/   
+   
 *(visited+p1.i*col+p1.j)=1;
 *(visited+p2.i*col+p2.j)=1;
-//printf("x=%d\ty=%d\np1-i=%d  j=%d\np2-i=%d  j=%d\n",x,y,p1.i,p1.j,p2.i,p2.j);
-//getDist(p1,p2);
+printf("x=%d\ty=%d\np1-i=%d  j=%d\np2-i=%d  j=%d\n",x,y,p1.i,p1.j,p2.i,p2.j);
+getDist(p1,p2);
 
 }
 
@@ -665,7 +697,7 @@ void build_image (int r,int c, char* s) /*construct the image to show curvature*
                           unsigned char ch;
                           char t[200];
                           int d,m;
-                          char *mystring ="-output.pgm"; /* output image name*/
+                          char *mystring="-output.pgm"; /* output image name*/
                           build_my_file(r,c);/*to make myfile.dat */
                           /*--------------------------------*/
                  for(i=strlen(s)-1;i>=0;i--)
