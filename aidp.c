@@ -96,14 +96,14 @@ main(int argc,char* argv[])
 				for(j=0;j<col;j++)
 				{
 					if(*(mat+i*col+j)==0 && *(taken+i*col+j)==0)
-						{
-						//printf("Calling for %d row, %d col\n",i,j);
-						//poly(i,j);
-						flag=1;
-						}if(flag) break;
-				}if(flag) break;
+						{omega=0.0;ep=0.0;vdev=0.0;vcount=0;totvd=0.0;totrd=0.0;mark=0;vdcount=0;rdcount=0;x=0;
+						printf("Calling for %d row, %d col\n",i,j);
+						poly(i,j);
+						//flag=1;
+						}//if(flag) break;
+				}//if(flag) break;
 			}
-			poly(i,j);
+			//poly(i,j);
 
 		/*	for(i=0;i<row;i++)
 			   for(j=0;j<col;j++)
