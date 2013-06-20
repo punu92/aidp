@@ -19,8 +19,7 @@ typedef struct
 vertx five[5],*v;
 float *vd,*rd,ep=0;
 int row,col,vdcount=0,rdcount=0,vcount=0;
-int mark,count0=0,*direc,x=0;
-//int tot=0;
+int mark,count0=0,*direc,relax=1,x=0;
 float vdev=0.0,omega=0.0;
 float beta,alpha,totvd=0.0,totrd=0.0;
 
@@ -34,7 +33,7 @@ void getDist(vertx,vertx);
 void aidp(vertx *,int,int);
 void calcDist();
 void calcPerp(float *,float *,vertx *, int, int, int);
-float findPath(vertx *,vertx *,int *,int *,int, int, vertx);
+float findPath(vertx *,vertx *,int *,int *,vertx, vertx);
 void findNextPt(int,int,int *,int *, int);
 void findn(vertx *,int *,int,int,vertx);
 void poly(int i,int j);
@@ -46,7 +45,7 @@ main(int argc,char* argv[])
                         int *x,flag=0;
                         int i,j,vc=0;
 			FILE *fm=fopen("mat.dat","w");
-
+			FILE *fvs=fopen("vis.dat","w");
 			FILE *fv=fopen("ver.dat","w");
 
                         x=count_rc(argv[1]);   /* the pgm file is given as input ; returns #row, #col*/
@@ -98,8 +97,7 @@ main(int argc,char* argv[])
 				for(j=0;j<col;j++)
 				{
 					if(*(mat+i*col+j)==0 && *(taken+i*col+j)==0)
-						{//tot=mark;
-						omega=0.0;ep=0.0;vdev=0.0;vcount=0;totvd=0.0;totrd=0.0;mark=0;vdcount=0;rdcount=0;x=0;
+						{omega=0.0;ep=0.0;vdev=0.0;vcount=0;totvd=0.0;totrd=0.0;mark=0;vdcount=0;rdcount=0;x=0;
 						printf("Calling for %d row, %d col\n",i,j);
 						poly(i,j);
 						//flag=1;
@@ -108,11 +106,13 @@ main(int argc,char* argv[])
 			}
 			//poly(i,j);
 
-		/*	for(i=0;i<row;i++)
+			for(i=0;i<row;i++)
 			   for(j=0;j<col;j++)
-				if(*(visited+i*col+j)==1)
-					fprintf(fv,"%d\t%d\n",i,j);
-			fclose(fv);*/
+			      if(*(visited+i*col+j)==1)
+				   {fprintf(fvs,"%d\t%d\t%d\n",vc,i,j);
+				   *(cdata+i*col+j)=30;
+				   }
+			fclose(fvs);
 
                         build_image(row,col, argv[1]);/*build image -- uses cdata*/   
                         }
@@ -121,7 +121,6 @@ void poly(int r,int c)
 {
 int i=r,j=c,k,chng,vc,ni,nj;
 int start1=0,dir,pol=0;
-//mark=tot;
 mark=0;
 FILE *ft=fopen("taken.dat","w");
 //cv=(vertx *)malloc(row*col*sizeof(vertx));
@@ -140,7 +139,7 @@ do
 
 	chng=0;
 	*(taken+i*col+j)=1;  //fprintf(ft,"%d\t%d\n",i,j);
-	printf("poly:: ver: row=%d col=%d\n",i,j);
+//	printf("poly:: ver: row=%d col=%d\n",i,j);
 	ni=i; nj=j;
 
 	if(j>0 && *(mat+i*col+j-1)==0 && *(taken+i*col+j-1)==0){nj=j-1; chng++; dir=4;}
@@ -154,15 +153,12 @@ do
 	if(i>0 && *(mat+(i-1)*col+j)==0 && *(taken+(i-1)*col+j)==0){ni=i-1; chng++; dir=2;}
 
 	if(j>0 && *(mat+(i+1)*col+j-1)==0 && *(taken+(i+1)*col+j-1)==0){ni=i+1; nj=j-1; chng++; dir=5;}
-	
-	//printf("prev change i= %d j=%d chng=%d\n",ni,nj,chng);
 
 	if(*(mat+(i+1)*col+j)==0 && *(taken+(i+1)*col+j)==0){ni=i+1; chng++; dir=6;}
 
 	if(*(mat+(i+1)*col+j+1)==0 && *(taken+(i+1)*col+j+1)==0){ni=i+1; nj=j+1; chng++; dir=7;}
 
-	//printf("ni=%d nj=%d chng=%d\n",ni,nj,chng);
-	printf("chng= %d\n",chng);
+	//printf("chng=%d\n",chng);
 	if(chng>1 && vcount>0) break;
 	i=ni; j=nj;
 
@@ -177,13 +173,22 @@ do
 
 	if(!chng) {printf("Breaking..\n");break;}
 
-	}while((i!=r || j!=c) && i<row && j<col);fclose(ft);
+	}while((i!=r || j!=c) && i<row && j<col);
+if(!k){v[mark].i=i; v[mark].j=j; v[mark].yes=0; mark++; fprintf(ft,"%d\t%d\n",i,j);}
 
+fclose(ft);
 if((i<=r+1 && i>=r-1) && (j<=c+1 && j>=c-1) && vcount>2) pol=1;
 
 if(chng>1) pol=0;
 //cnt1++;
 printf("vcount= %d mark=%d\n",vcount,mark);
+
+if(mark==1)
+	{v[mark-1].yes=1;pol=2;}
+else if(mark==2)
+	{v[mark-2].yes=v[mark-1].yes=1;
+	bresenham_line(v[mark-2].i,v[mark-2].j,v[mark-1].i,v[mark-1].j,col);
+	pol=2;}
 
 	vc=vcount;
 	vcount>>1;
@@ -196,16 +201,16 @@ printf("vcount= %d mark=%d\n",vcount,mark);
 //	for(vc=0;vc<mark;vc++)
 //		printf("Taken = i: %d  j: %d\n",v[vc].i,v[vc].j);
 
-if(pol)
+if(pol==1)
         start(0,mark); 
-else
+else if(!pol)
 	curve(0,mark);
 
 	for(vc=0;vc<mark;vc++)
 	{
 		if(v[vc].yes==1)
 		{//fprintf(ft,"%d\t%d\n",v[vc].i,v[vc].j);
-		*(cdata+(v[vc].i)*col+(v[vc].j))=9;
+		*(cdata+(v[vc].i)*col+(v[vc].j))=20;
 		}
 	}  //fclose(ft);
 
@@ -273,7 +278,7 @@ int second,edge_break,first_run,prev,second_run,nonsing_run,prev_sec,first,third
 		if(nonsing_run!=0)
 			{
 			if(x==ct)	return 0;
-	if(nonsing_run>=(prev-1) && nonsing_run<=(prev+1))prev_sec=nonsing_run;
+	if(nonsing_run>=(prev-relax) && nonsing_run<=(prev+relax))prev_sec=nonsing_run;
 	//		if(nonsing_run==(prev-1) || nonsing_run==(prev+1))	prev_sec=nonsing_run;
 			else return 1;
 			}
@@ -290,7 +295,7 @@ int second,edge_break,first_run,prev,second_run,nonsing_run,prev_sec,first,third
 				if(x==ct)return 0;
 				while(x<ct && *(direc+x)==second){nonsing_run++;x++;}
 			
-			if(!(nonsing_run>=(prev-1) && nonsing_run<=(prev+1)))
+			if(!(nonsing_run>=(prev-relax) && nonsing_run<=(prev+relax)))
 		//	if(nonsing_run!=prev && nonsing_run!=prev_sec)
 				{//printf("nonsing is %d. prev is %d.beyond bounds.1 \n",nonsing_run,prev);
 				return 1;}
@@ -404,16 +409,8 @@ void getDist(vertx p1, vertx p2)//Finding the start point
     cvA=(vertx *)malloc((vcount/2)*sizeof(vertx));
     cvB=(vertx *)malloc((vcount/2)*sizeof(vertx));
 
-    for(i=0;i<row;i++)
-    {
-        for(j=0;j<col;j++)
-       {
-       if(i==p1.i && j==p1.j)
-           {
-           ep=findPath(cvA,cvB,&cntA,&cntB,i,j,p2);
-           }
-       }
-    }
+    ep=findPath(cvA,cvB,&cntA,&cntB,p1,p2);
+ 
     if(ep==-1)
 		printf("error\n");
     omega+=ep*beta;                 //Radial dist. threshold Omega
@@ -453,13 +450,13 @@ prev=0;
     }
 bresenham_line(p2.i,p2.j,vprev.i,vprev.j,col);
 
-   free(cvA);
-   free(cvB);
+//free(cvA);
+//free(cvB);
 }
 
 void aidp(vertx *points,int start,int end)
 {
-    float vd,vdist=0.0,rd=0.0;
+    float vd=0.0,vdist=0.0,rd=0.0;
     int index,i,chck=0;
     printf("end:%d\tstart:%d\n",end,start);
     if(end-start<3)
@@ -493,72 +490,73 @@ void aidp(vertx *points,int start,int end)
 }
 
 //----------------------------------------------------------------------------------------------------------------------------
-float findPath(vertx *cvA,vertx *cvB,int *acnt,int *bcnt,int i, int j, vertx p2)//Traverse the curves A and B
+float findPath(vertx *cvA,vertx *cvB,int *acnt,int *bcnt,vertx p1, vertx p2)//Traverse the curves A and B
 {
+int i,j;
 int a=0,err=0,next1row,next1col,next2row,next2col,dir1,dir2;
 float epA=0, epB=0, avA=0, avB=0;
 int cntA,cntB;
 
+i=p1.i;j=p1.j;
+
 cntA=*(acnt);
 cntB=*(bcnt);
-if(j>0 && *(mat+i*col+j-1)==0){a++;   next1row=i; next1col=j-1; dir1=4;}
-   
-if(*(mat+i*col+j+1)==0 && *(taken+i*col+j+1)){if(a==1){next2row=i;next2col=j+1;dir2=0;} else{next1row=i;next1col=j+1;dir1=0;} a++;}
 
-if(i>0 && *(mat+(i-1)*col+j+1)==0 && *(taken+(i-1)*col+j+1) && a<=2){if(a==1){next2row=i-1;next2col=j+1;dir2=1;} else{next1row=i-1;next1col=j+1;dir1=1;} a++;}
+for(a=0;a<mark && (v[a].i!=i || v[a].j!=j);a++);
 
-if(i>0 && j>0 && *(mat+(i-1)*col+j-1)==0 && *(taken+(i-1)*col+j-1) && a<=2){if(a==1){next2row=i-1;next2col=j-1;dir2=3;} else{next1row=i-1;next1col=j-1;dir1=3;} a++;}
+printf("fP: a=%d row=%d col=%d\n",a,i,j);
 
-if(i>0 && *(mat+(i-1)*col+j)==0 && *(taken+(i-1)*col+j) && a<=2){if(a==1){next2row=i-1;next2col=j;dir2=2;} else{next1row=i-1;next1col=j;dir1=2;} a++;}
+next1row=v[(a+1)%mark].i;
+next1col=v[(a+1)%mark].j;
 
-if(j>0 && *(mat+(i+1)*col+j-1)==0 && *(taken+(i+1)*col+j-1) && a<=2){if(a==1){next2row=i+1;next2col=j-1;dir2=5;} else{next1row=i+1;next1col=j-1;dir1=5;} a++;}
-
-if(*(mat+(i+1)*col+j)==0 && *(taken+(i+1)*col+j) && a<=2){if(a==1){next2row=i+1;next2col=j;dir2=6;} else{next1row=i+1;next1col=j;dir1=6;} a++;}
-
-if(*(mat+(i+1)*col+j+1)==0 && *(taken+(i+1)*col+j+1) && a<=2){if(a==1){next2row=i+1;next2col=j+1;dir2=7;} else{next1row=i+1;next1col=j+1;dir1=7;} a++;}
+next2row=v[(mark+a-1)%mark].i;
+next2col=v[(mark+a-1)%mark].j;
 
 printf("next1row:%d\tnext1col:%d\nnext2row:%d\tnext2col:%d\n",next1row,next1col,next2row,next2col);
-if(a>2)
-       return -1;
+
+
 //------------------Traverse curve A
-if(p2.i!=next1row && p2.j!=next1col)
+if(p2.i!=next1row || p2.j!=next1col)
    {
    *(visited+next1row*col+next1col)=1;
-   //printf("entered 1st call\n");
+   printf("entered 1st call\n");
    findn(cvA,&cntA,next1row,next1col,p2);}
+else printf("couldn't enter");
 
 if(cntA)
-   {
-   avA=(totvd/(cntA-1));                                //Get the Avg. Vertical Dist.
-   
+   {if(cntA!=1)
+	   avA=(totvd/(cntA-1));                                //Get the Avg. Vertical Dist.
+   else avA=totvd;
    for(i=0;i<vdcount;i++)                           //Calculate the mean deviation
       vdev+=abs(vd[i]-avA);
-   printf("vdev before division=%f and vdcount=%d",vdev,vdcount);
-   vdev/=(cntA-1);
+   printf("vdev before division=%f and vdcount=%d\n",vdev,vdcount);
+   if(cntA!=1) vdev/=(cntA-1);
 
    epA = avA + alpha*vdev;                           //Vertical dist. threshold Epsilon for A
    omega=totrd;                             
-   printf("cntA=%d\tavA=%f\nvdev=%f\tepA=%f\ntotvd=%f\ttotrd=%f",cntA,avA,vdev,epA,totvd,totrd);
+   printf("cntA=%d\tavA=%f\nvdev=%f\tepA=%f\ntotvd=%f\ttotrd=%f\n",cntA,avA,vdev,epA,totvd,totrd);
    }
 else
    {epA=0;omega=0;}
 
 //--------------------Traverse curve B
 totvd=0;totrd=0;
-if(p2.i!=next2row && p2.j!=next2col)
+if(p2.i!=next2row || p2.j!=next2col)
    {
    *(visited+next2row*col+next2col)=1;
    findn(cvB,&cntB,next2row,next2col,p2);
    }
 
 if(cntB)
-   {   
-   avB=(totvd/(cntB-1));                                 //Get the Avg. Vertical Dist.
+   {if(cntB!=1)
+	   avB=(totvd/(cntB-1));                                 //Get the Avg. Vertical Dist.
+    else
+	avB=totvd;
    vdev=0.0;
    for(i=0;i<vdcount;i++)                             //Calculate the mean deviation
       vdev+=abs(vd[i]-avB);
-   printf("vdev before division=%f and vdcount=%d",vdev,vdcount);
-   vdev/=(cntB-1);
+   printf("vdev before division=%f and vdcount=%d\n",vdev,vdcount);
+   if(cntB!=1) vdev/=(cntB-1);
 
    epB = avB + alpha*vdev;                            //Vertical dist. threshold Epsilon for B
    omega+=totrd;
@@ -579,49 +577,40 @@ return epB;
 void findn(vertx *c,int *cnt,int i,int j,vertx end)//------------------Searches the neighbourhood of a point to get the next
 {
 int chng=0;
-int cnt1,k;
+int cnt1,k,a,b;
 *(cnt)=0;
 cnt1=*(cnt);
 
-while((i!=end.i || j!=end.j) && i<row && j<col)
+for(a=0;a<mark && (v[a].i!=i || v[a].j!=j);a++);
+
+printf("ver: a=%d row=%d col=%d\n",a,i,j);
+
+while(v[a].i!=end.i || v[a].j!=end.j)
 	{
-	
+
 	c[cnt1].i=i;
 	c[cnt1].j=j;
-	
-	chng=0;
-	*(visited+i*col+j)=1;
-	//printf("ver: row=%d col=%d\n",i,j);
-	
+	c[cnt1].yes=0;
+
 	for(k=0;(k<cnt1 && cnt1<4) || k<4; k++)
 		five[k]=five[k+1];
 	five[k].i=i;   five[k].j=j;
+	printf("ver in loop: a=%d row=%d col=%d\n",a,i,j);
+	*(visited+i*col+j)=1;
 
-	if(j>0 && *(mat+i*col+j-1)==0 && *(visited+i*col+j-1)==0 && *(taken+i*col+j-1) && chng==0){j=j-1;chng=1;}
-   
-	if(*(mat+i*col+j+1)==0 && *(visited+i*col+j+1)==0 && *(taken+i*col+j+1) && chng==0){j=j+1;chng=1;}
-
-	if(i>0 && *(mat+(i-1)*col+j+1)==0 && *(visited+(i-1)*col+j+1)==0 && *(taken+(i-1)*col+j+1) && chng==0){i=i-1;j=j+1;chng=1;}
-
-	if(i>0 && j>0 && *(mat+(i-1)*col+j-1)==0 && *(visited+(i-1)*col+j-1)==0 && *(taken+(i-1)*col+j-1) && chng==0){i=i-1;j=j-1;chng=1;}
-
-	if(i>0 && *(mat+(i-1)*col+j)==0 && *(visited+(i-1)*col+j)==0 && *(taken+(i-1)*col+j) && chng==0){i=i-1;chng=1;}
-
-	if(j>0 && *(mat+(i+1)*col+j-1)==0 && *(visited+(i+1)*col+j-1)==0 && *(taken+(i+1)*col+j-1) && chng==0){i=i+1;j=j-1;chng=1;}
-
-	if(*(mat+(i+1)*col+j)==0 && *(visited+(i+1)*col+j)==0 && *(taken+(i+1)*col+j) && chng==0){i=i+1;chng=1;}
-
-	if(*(mat+(i+1)*col+j+1)==0 && *(visited+(i+1)*col+j+1)==0 && *(taken+(i+1)*col+j+1) && chng==0){i=i+1;j=j+1;chng=1;}
-
-	if(cnt1%2==0 && cnt1>=4 && chng==1)  calcDist();
-	
+	if(cnt1%2==0 && cnt1>=4)  calcDist();
 	cnt1++;
+
+	a=(a+1)%mark;//printf("a1=%d\n",a);
+	i=v[a].i; j=v[a].j;
+	if(*(visited+i*col+j)==1) {a=(mark+a-2)%mark;/*printf("a2=%d\n",a);*/}
 	
-	if(!chng) {printf("Breaking..\n");
-	break;}
+	i=v[a].i; j=v[a].j;
+	if(*(visited+i*col+j)==1) {printf("Breaking, no choice\n");break;}
 	}
 
-*(cnt)=cnt1++;
+
+*(cnt)=cnt1;
 }
 
 void calcDist()//-----------------------------------calculate the vertical and radial distances------------------------
@@ -653,7 +642,7 @@ void calcDist()//-----------------------------------calculate the vertical and r
 
 void calcPerp(float *vd ,float *rd ,vertx *points, int start, int x, int end)
 {
-    int ve,r,rd1,rd2,m,c;
+    float ve,r,rd1,rd2,m,c;
     vertx p1,p2,p;
     p1=points[start];
     p2=points[end];
@@ -670,7 +659,11 @@ void calcPerp(float *vd ,float *rd ,vertx *points, int start, int x, int end)
 
     rd1=sqrt(pow((p.i-p1.i),2)+pow((p.j-p1.j),2));
     rd2=sqrt(pow((p.i-p2.i),2)+pow((p.j-p2.j),2));
+
+    //printf("P1: r=%d c=%d P: r=%d c=%d P2: r=%d c=%d\n",p1.i,p1.j,p.i,p.j,p2.i,p2.j);
+    //printf("slope=%f  intercept=%f  vert dist=%f rad 1=%f rad2=%f\n",m,c,ve,rd1,rd2);
     //printf("CalcPerp vert dist=%d  rad dist1=%d rad dist2=%d\n",ve,rd1,rd2);
+
     if(rd1>rd2)   r=rd1; else r=rd2;
     
     *(vd)=ve;
@@ -681,24 +674,26 @@ void calcPerp(float *vd ,float *rd ,vertx *points, int start, int x, int end)
 
 void curve(int start, int end)
 {
-vertx st,en;
-vertx *c,vprev;
+vertx st,en,vprev;
+vertx *c;
 int i,j,k,l,cnt=0,prev=0;
 float avg;
+
 st=v[start];
 en=v[end];
-/*
-c=(vertx *)malloc((vcount/2)*sizeof(vertx));
-printf("\nmalloced\n");
+
+c=(vertx *)malloc(vcount*sizeof(vertx));
+
 findn(c,&cnt,st.i,st.j,en);
+
 if(cnt)
-   {
-   avg=(totvd/(cnt-1));                                //Get the Avg. Vertical Dist.
-   
+   {if(cnt!=1)
+	   avg=(totvd/(cnt-1));                                //Get the Avg. Vertical Dist.
+   else avg=totvd;
    for(i=0;i<vdcount;i++)                           //Calculate the mean deviation
       vdev+=abs(vd[i]-avg);
    printf("vdev before division=%f and vdcount=%d\n",vdev,vdcount);
-   vdev/=(cnt-1);
+   if(cnt!=1) vdev/=(cnt-1);
 
    ep = avg + alpha*vdev;                           //Vertical dist. threshold Epsilon for A
    omega=(totrd/cnt)+beta*vdev;                             
@@ -720,7 +715,7 @@ c[cnt-1].yes=1;
 		vprev=c[k];}
     }
 
-free(c);*/
+free(c);
 }
 
 //---------------------------------------Image input and output--------------------------------------------------------------
@@ -786,9 +781,10 @@ void build_image (int r,int c, char* s) /*construct the image to show curvature*
                             //ch=*(cdata+i*c+j);
 				mydata=*(cdata+i*c+j);//printf("%d\n",mydata);
 				if(mydata==0 ){color[0]=255;color[1]=0;color[2]=0;/*printf("0\n");*/fwrite(color,1,3,fp1);}
-				else if(mydata==255 ){color[0]=127;color[1]=127;color[2]=127;/*printf("255\n");*/fwrite(color,1,3,fp1);}
+				else if(mydata==255 ){color[0]=0;color[1]=0;color[2]=0;/*printf("255\n");*/fwrite(color,1,3,fp1);}
 				else if(mydata==9){color[0]=255;color[1]=255;color[2]=0;/*printf("9\n");*/fwrite(color,1,3,fp1);}
-				
+				else if(mydata==20){color[0]=255;color[1]=0;color[2]=255;/*printf("20\n");*/fwrite(color,1,3,fp1);}
+				else if(mydata==30){color[0]=0;color[1]=0;color[2]=255;/*printf("30\n");*/fwrite(color,1,3,fp1);}
                             //fwrite(&ch,sizeof(ch),1,fp1);
                            }
                           
