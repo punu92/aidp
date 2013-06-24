@@ -19,7 +19,7 @@ typedef struct
 vertx five[5],*v;
 float *vd,*rd,ep=0;
 int row,col,vdcount=0,rdcount=0,vcount=0;
-int mark,count0=0,*direc,relax=1,x=0;
+int mark,count0=0,*direc,relax=1,x;
 float vdev=0.0,omega=0.0;
 float beta,alpha,totvd=0.0,totrd=0.0;
 
@@ -109,8 +109,8 @@ main(int argc,char* argv[])
 			for(i=0;i<row;i++)
 			   for(j=0;j<col;j++)
 			      if(*(visited+i*col+j)==1)
-				   {fprintf(fvs,"%d\t%d\t%d\n",vc,i,j);
-				   *(cdata+i*col+j)=30;
+				   {fprintf(fvs,"%d\t%d\n",i,j);
+				   *(cdata+i*col+j)=20;
 				   }
 			fclose(fvs);
 
@@ -139,7 +139,7 @@ do
 
 	chng=0;
 	*(taken+i*col+j)=1;  //fprintf(ft,"%d\t%d\n",i,j);
-//	printf("poly:: ver: row=%d col=%d\n",i,j);
+	//printf("poly:: ver: row=%d col=%d\t",i,j);
 	ni=i; nj=j;
 
 	if(j>0 && *(mat+i*col+j-1)==0 && *(taken+i*col+j-1)==0){nj=j-1; chng++; dir=4;}
@@ -158,7 +158,7 @@ do
 
 	if(*(mat+(i+1)*col+j+1)==0 && *(taken+(i+1)*col+j+1)==0){ni=i+1; nj=j+1; chng++; dir=7;}
 
-	//printf("chng=%d\n",chng);
+	printf("chng=%d\n",chng);
 	if(chng>1 && vcount>0) break;
 	i=ni; j=nj;
 
@@ -174,17 +174,17 @@ do
 	if(!chng) {printf("Breaking..\n");break;}
 
 	}while((i!=r || j!=c) && i<row && j<col);
-if(!k){v[mark].i=i; v[mark].j=j; v[mark].yes=0; mark++; fprintf(ft,"%d\t%d\n",i,j);}
 
-fclose(ft);
 if((i<=r+1 && i>=r-1) && (j<=c+1 && j>=c-1) && vcount>2) pol=1;
 
 if(chng>1) pol=0;
-//cnt1++;
+
+if(!k && (chng==1 || (!chng && !pol))){v[mark].i=i; v[mark].j=j; v[mark].yes=0; mark++; fprintf(ft,"%d\t%d\n",i,j);}
+fclose(ft);
 printf("vcount= %d mark=%d\n",vcount,mark);
 
 if(mark==1)
-	{v[mark-1].yes=1;pol=2;}
+	{v[mark-1].yes=1;pol=2; bresenham_line(i,j,v[mark-1].i,v[mark-1].j,col);}
 else if(mark==2)
 	{v[mark-2].yes=v[mark-1].yes=1;
 	bresenham_line(v[mark-2].i,v[mark-2].j,v[mark-1].i,v[mark-1].j,col);
@@ -210,7 +210,7 @@ else if(!pol)
 	{
 		if(v[vc].yes==1)
 		{//fprintf(ft,"%d\t%d\n",v[vc].i,v[vc].j);
-		*(cdata+(v[vc].i)*col+(v[vc].j))=20;
+		*(cdata+(v[vc].i)*col+(v[vc].j))=30;
 		}
 	}  //fclose(ft);
 
@@ -223,162 +223,140 @@ else if(!pol)
 
 //--------------------------------------------DSS Check----------------------------------------------------------------------
 
+
 int checkR1R2(int start,int ct)
 {
-//printf("entering check_R1\n");
+   
+    if(ct==0 || ct==1)return 0;
+    int second,edge_break,first_run,prev,second_run,nonsing_run,prev_sec,first,third;
+        second=300;edge_break=0;
+        first_run=prev=0;second_run=0;nonsing_run=0;
+for(x=start;x<ct;x++)
+printf(" %d ",*(direc+x));
+printf("\n");
+        for(x=start;x<ct;x++)// checking rule 1
+        {
 
-if((ct-start)<2)	return 0;
+                              if(x==0)
+                                      first=*(direc+x);
+                              if(*(direc+x)!=first && second==300)
+                                      {second=*(direc+x);}
+                              else if(*(direc+x)!=first && *(direc+x)!=second)
+                                      {edge_break=1;/*count=x;*/break;}
+       
+         }
 
-int second,edge_break,first_run,prev,second_run,nonsing_run,prev_sec,first,third;
+    if(second==300)return 0;
+             if(edge_break==1)
+             {
+             return edge_break;
+             }
+            prev_sec=-1;prev=0;nonsing_run=0;x=start;first_run=0;
+        while(*(direc+x)==first && x<ct)
+            {first_run++;x++;}
+        while(*(direc+x)==second && x<ct)
+            {nonsing_run++;x++;}
+        if(first_run<nonsing_run)
+        {
+            prev=nonsing_run;//3
+            nonsing_run=0;
+            while(*(direc+x)==first && x<ct)   x++;
+            if(x==ct)return 0;
+            while(*(direc+x)==second && x<ct){nonsing_run++;x++;}//3
 
-             second=300;edge_break=0;
-             first_run=prev=0;second_run=0;nonsing_run=0;
+            if(nonsing_run!=0)
+            {
+                if(x==ct)return 0;
+                if(nonsing_run>=(prev-relax) && nonsing_run<=(prev+relax))
+                    prev_sec=nonsing_run;
+                else return 1;
+            }
+            else return 0;
 
-//------Checking R1-- Directions of runs can have 2 values, differing by 1 modulus 8
-
-	for(x=start;x<ct;x++)
-		{
-		//printf("%d ",*(direc+x));
-		if(x==0)first=*(direc+x);
-
-		if(*(direc+x)!=first && second==300){second=*(direc+x);}
-		else if(*(direc+x)!=first && *(direc+x)!=second){edge_break=1;/*count=x;*/break;}
-	
-		}//printf("\n");
-
-	if(second==300)return 0;
-
-	if(edge_break==1)
-		{
-		//printf("more than 3.returning-- %d\n",edge_break);                             
-		return edge_break;
+            nonsing_run=0;
+            while(x<ct)
+            {
+                nonsing_run=0;
+                if(*(direc+x+1)==first && x!=ct-1)
+                {
+                    return 1;
                 }
-
-	//printf(".\n");//return 0;
-
-	prev_sec=-1;prev=0;nonsing_run=0;x=start;first_run=0;
-
-	while(*(direc+x)==first && x<ct){first_run++;x++;}//1
-	while(*(direc+x)==second && x<ct){nonsing_run++;x++;}//2
-
-	if(first_run!=1 && nonsing_run!=1)	return 1;
-		
-	if(first_run<nonsing_run)
-		{
-		prev=nonsing_run;//3
-		nonsing_run=0;
-		while(*(direc+x)==first && x<ct)
-		{/*//*/if(*(direc+x+1)==first)return 1;
-		x++;}
-
-		if(x==ct)	return 0;
-
-		while(*(direc+x)==second && x<ct){nonsing_run++;x++;}//3
-	
-		if(nonsing_run!=0)
-			{
-			if(x==ct)	return 0;
-	if(nonsing_run>=(prev-relax) && nonsing_run<=(prev+relax))prev_sec=nonsing_run;
-	//		if(nonsing_run==(prev-1) || nonsing_run==(prev+1))	prev_sec=nonsing_run;
-			else return 1;
-			}
-		else
-			{return 0;}
-//printf("___");
-		nonsing_run=0;
-		while(x<ct)
-		{
-			nonsing_run=0;
-			if(*(direc+x+1)==first && x!=ct-1){//printf("next is same\n");
-			return 1;} else x++;
-		//while(*(direc+x)==first && x<ct)x++;			
-				if(x==ct)return 0;
-				while(x<ct && *(direc+x)==second){nonsing_run++;x++;}
-			
-			if(!(nonsing_run>=(prev-relax) && nonsing_run<=(prev+relax)))
-		//	if(nonsing_run!=prev && nonsing_run!=prev_sec)
-				{//printf("nonsing is %d. prev is %d.beyond bounds.1 \n",nonsing_run,prev);
-				return 1;}
-			nonsing_run=0;
-			}return 0;
-		}
-	
-	else //if(nonsing_run==1)
-		{
-		prev=first_run;//2
-		first_run=0;
-
-		//while(*(direc+x)==second && x<ct)
-		//	{//if(*(direc+x+1)==second && x!=ct-1)return 1;
-		//	x++;}
-
-		//if(x==ct)return 0;
-
-		while(*(direc+x)==first && x<ct){first_run++;x++;}//3
-		
-//		printf("firstrun is %d and prev is %d\n",first_run,prev);
-
-		if(first_run!=0)
-			{
-			//if(x==ct || x==ct-1)return 0;
-			if((first_run>=(prev-1) && first_run<=(prev+1)) /*&& *(direc+x)==second*/)
-				prev_sec=first_run;
-			else if(first_run<prev && x>ct-1) {/*printf("first_run<prev %d\n",first_run);*/return 0;}
-			else {/*printf("Break edge\n");*/return 1;}
-	                }
-		else
-			return 0;
-		//printf("prev_sec is %d\n",prev_sec);
-		
-		first_run=0;
-		while(x<ct)
-			{
-			if(*(direc+x)==second && *(direc+x+1)==second /*&& x+1<ct*/)
-				return 1; 
-			else x++;
-
-			while(x<ct && *(direc+x)==first){first_run++;x++;}
-
-			//printf("firstrun is %d\n",first_run);
-					
-			if(!(first_run<prev && x>ct-2) && (first_run!=prev || first_run!=prev_sec))	return 1;
-			else if(x==ct )return 0;
-			first_run=0;
-			}
-		return 0;
-		}
-		
-	//printf("returning %d\n",edge_break);                             
-	return 1;
-
+                 else x++;
+            if(x==ct)return 0;
+            while(x<ct && *(direc+x)==second)
+            {
+                nonsing_run++;
+                x++;
+            }
+            if(!(nonsing_run>=(prev-relax) && nonsing_run<=(prev+relax)))
+            {
+                return 1;
+            }
+            nonsing_run=0;
+        }
+        return 0;
+        }
+        else if(nonsing_run==1)
+        {
+            prev=first_run;//2
+            first_run=0;
+            while(*(direc+x)==second && x<ct)
+            {
+                x++;
+            }
+        if(x==ct)return 0;
+        while(*(direc+x)==first && x<ct)
+        {
+            first_run++;
+            x++;
+        }
+        first_run=0;
+        while(x<ct)
+        {
+            if(*(direc+x)==second && *(direc+x+1)==second && x+1<ct)
+                return 1;
+            else
+                 x++;
+            while(x<ct && *(direc+x)==first)
+                {
+                first_run++;
+                x++;
+                }
+            if(x==ct )return 0;
+            if(!(first_run>=(prev-relax) && first_run<=(prev+relax)))return 1;
+            first_run=0;
+        }
+    return 0;
+        }
+       
+             return 1;
 }
-
 //--------------------------------------------Adaptively Improved Douglas Peucker Algorithm-----------------------------------
 
 void start(int start, int end)
 {
 vertx center, p1, p2;
-int x=0,y=0,q,l1max=0,l2max=0,l=0;
+int cx=0,cy=0,q,l1max=0,l2max=0,l=0,a1,a2;
 
 for(q=start;q<end;q++)
   {
-     x+=v[q].i;
-     y+=v[q].j;//printf("Sum: %d , %d\n",x,y);
+     cx+=v[q].i;
+     cy+=v[q].j;//printf("Sum: %d , %d\n",x,y);
   }
-if(end==start) {center.i=x; center.j=y;}
+if(end==start) {center.i=cx; center.j=cy;}
 else{
-x=x/(end-start);
-center.i=x;
-y=y/(end-start);
-center.j=y;}
+cx=cx/(end-start);
+center.i=cx;
+cy=cy/(end-start);
+center.j=cy;}
 
 for(q=start;q<end;q++)
    {
-      l=sqrt(pow((x-v[q].i),2)+ pow((y-v[q].j),2));
+      l=sqrt(pow((cx-v[q].i),2)+ pow((cy-v[q].j),2));
       if(l>l1max)
                 {
                 l1max=l;
-                p1=v[q];
+                p1=v[q];a1=q;
                 }
    }
    
@@ -388,13 +366,13 @@ for(q=start;q<end;q++)
       if(l>l1max)
                 {
                 l1max=l;
-                p2=v[q];
+                p2=v[q];a2=q;
                 }
    }
    
 *(visited+p1.i*col+p1.j)=1;
 *(visited+p2.i*col+p2.j)=1;
-printf("x=%d\ty=%d\np1-i=%d  j=%d\np2-i=%d  j=%d\n",x,y,p1.i,p1.j,p2.i,p2.j);
+printf("x=%d\ty=%d\na1=%d  p1-i=%d  j=%d\na2=%d  p2-i=%d  j=%d\n",cx,cy,a1,p1.i,p1.j,a2,p2.i,p2.j);
 getDist(p1,p2);
 
 }
@@ -473,8 +451,9 @@ void aidp(vertx *points,int start,int end)
        }
        printf("Max dist:%f\tIndex:%d\n",vdist,index);
     
-    if(vdist>ep || (vdist<=ep && rd>omega))
+    if(vdist>=ep || (vdist<ep && rd>=omega))
        {
+	   points[start].yes=1;
            points[index].yes=1;
 	   if(index){
            aidp(points,start,index-1);printf("BRANCH\n");
@@ -527,6 +506,12 @@ if(cntA)
    {if(cntA!=1)
 	   avA=(totvd/(cntA-1));                                //Get the Avg. Vertical Dist.
    else avA=totvd;
+
+if(cntA<10)
+	{
+	for(i=0;i<cntA;i++)
+		{cvA[i].yes=1;}	
+	}
    for(i=0;i<vdcount;i++)                           //Calculate the mean deviation
       vdev+=abs(vd[i]-avA);
    printf("vdev before division=%f and vdcount=%d\n",vdev,vdcount);
@@ -552,6 +537,12 @@ if(cntB)
 	   avB=(totvd/(cntB-1));                                 //Get the Avg. Vertical Dist.
     else
 	avB=totvd;
+
+if(cntB<10)
+	{
+	for(i=0;i<cntB;i++)
+		{cvB[i].yes=1;}	
+	}
    vdev=0.0;
    for(i=0;i<vdcount;i++)                             //Calculate the mean deviation
       vdev+=abs(vd[i]-avB);
@@ -576,7 +567,7 @@ return epB;
 
 void findn(vertx *c,int *cnt,int i,int j,vertx end)//------------------Searches the neighbourhood of a point to get the next
 {
-int chng=0;
+int ch=0;
 int cnt1,k,a,b;
 *(cnt)=0;
 cnt1=*(cnt);
@@ -603,10 +594,12 @@ while(v[a].i!=end.i || v[a].j!=end.j)
 
 	a=(a+1)%mark;//printf("a1=%d\n",a);
 	i=v[a].i; j=v[a].j;
-	if(*(visited+i*col+j)==1) {a=(mark+a-2)%mark;/*printf("a2=%d\n",a);*/}
-	
-	i=v[a].i; j=v[a].j;
-	if(*(visited+i*col+j)==1) {printf("Breaking, no choice\n");break;}
+	if(*(visited+i*col+j)==1) 
+		{a=(mark+a-2)%mark;/*printf("a2=%d\n",a);*/
+		i=v[a].i; j=v[a].j;
+		if(*(visited+i*col+j)==1) 
+			{printf("Breaking, no choice\n");break;}
+		}
 	}
 
 
@@ -690,6 +683,12 @@ if(cnt)
    {if(cnt!=1)
 	   avg=(totvd/(cnt-1));                                //Get the Avg. Vertical Dist.
    else avg=totvd;
+if(cnt<10)
+	{
+	for(i=0;i<cnt;i++)
+		{c[i].yes=1;}	
+	}
+
    for(i=0;i<vdcount;i++)                           //Calculate the mean deviation
       vdev+=abs(vd[i]-avg);
    printf("vdev before division=%f and vdcount=%d\n",vdev,vdcount);
@@ -780,11 +779,11 @@ void build_image (int r,int c, char* s) /*construct the image to show curvature*
                            {
                             //ch=*(cdata+i*c+j);
 				mydata=*(cdata+i*c+j);//printf("%d\n",mydata);
-				if(mydata==0 ){color[0]=255;color[1]=0;color[2]=0;/*printf("0\n");*/fwrite(color,1,3,fp1);}
-				else if(mydata==255 ){color[0]=0;color[1]=0;color[2]=0;/*printf("255\n");*/fwrite(color,1,3,fp1);}
-				else if(mydata==9){color[0]=255;color[1]=255;color[2]=0;/*printf("9\n");*/fwrite(color,1,3,fp1);}
-				else if(mydata==20){color[0]=255;color[1]=0;color[2]=255;/*printf("20\n");*/fwrite(color,1,3,fp1);}
-				else if(mydata==30){color[0]=0;color[1]=0;color[2]=255;/*printf("30\n");*/fwrite(color,1,3,fp1);}
+				if(mydata==0 ){color[0]=127;color[1]=127;color[2]=127;/*printf("0\n");*/fwrite(color,1,3,fp1);}
+				else if(mydata==255 ){color[0]=255;color[1]=255;color[2]=255;/*printf("255\n");*/fwrite(color,1,3,fp1);}
+				else if(mydata==9){color[0]=0;color[1]=0;color[2]=255;/*printf("9\n");*/fwrite(color,1,3,fp1);}
+				else if(mydata==20){color[0]=255;color[1]=0;color[2]=0;/*printf("20\n");*/fwrite(color,1,3,fp1);}
+				else if(mydata==30){color[0]=0;color[1]=255;color[2]=0;/*printf("30\n");*/fwrite(color,1,3,fp1);}
                             //fwrite(&ch,sizeof(ch),1,fp1);
                            }
                           
